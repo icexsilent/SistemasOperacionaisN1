@@ -1,0 +1,12 @@
+schema: "classroom50/repo-config/v1"
+classroom: "so-4p"
+assignment: "proj1-simthreads"
+owner:
+  username: "icexsilent"
+  id: 79593509
+  accepted_at: "2026-09-14T22:33:38Z"
+source:
+  owner: "fci-sisop"
+  owner_id: 225750920
+  repo: "proj1-simthreads"
+  branch: "main"
