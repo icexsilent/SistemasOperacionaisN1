@@ -43,6 +43,8 @@ Ao final do projeto vocês devem ser capazes de:
 
 ## Compilar e rodar
 
+Para Windows e VS Code, consulte [TESTES.md](TESTES.md). A rotina `make test` compila e valida os dois modos automaticamente.
+
 ```
 make
 ./simulador --produtores 3 --consumidores 4 --capacidade 5 \

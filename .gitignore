@@ -1,3 +1,7 @@
 simulador
 *.o
 *.log
+simulador.exe
+resultados/
+__pycache__/
+!evidencias/*.log

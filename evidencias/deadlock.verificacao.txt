@@ -1,0 +1,7 @@
+espera circular encontrada:
+  cons-1 segura ['A'] e aguarda B
+  cons-2 segura ['A'] e aguarda B
+  cons-3 segura ['B'] e aguarda A
+  cons-4 segura ['B'] e aguarda A
+
+OK. 35 eventos verificados.

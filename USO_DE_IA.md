@@ -8,5 +8,4 @@ ser solicitados na correção.
 
 | Integrante | Ferramenta | Em que parte do projeto | O que foi pedido | O que foi aproveitado |
 |---|---|---|---|---|
-|  |  |  |  |  |
-|  |  |  |  |  |
+| Vinicius Rampazi de Oliveira | Codex (OpenAI) | Código do simulador | Apoio à compreensão, correção e organização do código, incluindo indentação | Esclarecimentos sobre o funcionamento do código, correções e ajustes de organização e indentação |

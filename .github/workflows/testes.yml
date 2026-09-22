@@ -1,0 +1,24 @@
+name: Testes do simulador
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compilar e testar os dois modos
+        run: make CFLAGS="-Wall -Wextra -Werror -g -O0 -pthread" test
+      - name: Guardar logs de teste
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-linux
+          path: resultados/

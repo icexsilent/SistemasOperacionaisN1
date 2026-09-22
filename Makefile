@@ -1,17 +1,28 @@
 CC      = gcc
-CFLAGS  = -Wall -Wextra -g -O0
+CFLAGS  = -Wall -Wextra -g -O0 -pthread
 LDFLAGS = -pthread
+PYTHON ?= python3
 
 SRC = $(wildcard src/*.c)
 OBJ = $(SRC:.c=.o)
+EXEEXT =
+ifeq ($(OS),Windows_NT)
+EXEEXT = .exe
+endif
+TARGET = simulador$(EXEEXT)
 
-simulador: $(OBJ)
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LDFLAGS)
 
-%.o: %.c
+%.o: %.c src/args.h src/log.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
-	rm -f simulador src/*.o *.log
+test: $(TARGET)
+	$(PYTHON) testar.py
 
-.PHONY: clean
+clean:
+	rm -f simulador simulador.exe src/*.o *.log
+
+.PHONY: all test clean
